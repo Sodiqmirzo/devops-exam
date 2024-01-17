@@ -1,0 +1,5 @@
+1. kubectl apply -f info.yaml
+
+2. kubectl get configmap -n exam-49
+
+3. output is next file ->

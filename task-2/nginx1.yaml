@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  labels:
+    author: Sodiqmirzo
+    project: practice
+  name: nginx1
+  namespace: exam-49
+spec:
+  containers:
+  - image: nginx
+    name: nginx1
+  dnsPolicy: ClusterFirst
+  restartPolicy: Always

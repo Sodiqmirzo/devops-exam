@@ -1,0 +1,5 @@
+1. kubectl apply -f go-app-expose-deployment.yaml
+
+2. kubectl get svc -n exam-49
+
+3. output is next file ->

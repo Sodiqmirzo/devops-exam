@@ -1,0 +1,5 @@
+1. kubectl apply -f database.yaml
+
+2. kubectl get secret -n exam-49
+
+3. output is next file ->

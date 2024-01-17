@@ -1,0 +1,5 @@
+1. kubectl scale deployment/go-app --replicas=3 -n exam-49
+
+2. kubectl get pods -n exam-49
+
+3. output is next file ->

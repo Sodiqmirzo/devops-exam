@@ -1,0 +1,7 @@
+1. kubectl apply -f go-app-ingress.yaml
+
+2. kubectl get ingress -n exam-49
+
+3. curl test.ittech.uz
+
+4. output is next file ->

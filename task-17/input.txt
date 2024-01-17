@@ -1,0 +1,9 @@
+1. kubectl get endpointslices -n exam-49
+NAME                 ADDRESSTYPE   PORTS   ENDPOINTS       AGE
+flask-app-9bsww      IPv4          5000    10.233.67.102   93m
+frontend-app-2k5t8   IPv4          80      10.233.68.89    70m
+go-app-zv498         IPv4          80      10.233.65.159   43m
+
+2. kubectl get endpointslice go-app-zv498 -n exam-49 -o json
+
+4. output is next file ->

@@ -1,0 +1,23 @@
+1. kubectl get svc -n exam-49
+NAME        TYPE       CLUSTER-IP     EXTERNAL-IP   PORT(S)        AGE
+flask-app   NodePort   10.233.5.119   <none>        80:30423/TCP   37s
+
+2. kubectl get pods -n exam-49 -o wide
+NAME                         READY   STATUS    RESTARTS   AGE     IP              NODE    NOMINATED NODE   READINESS GATES
+flask-app-745984f54c-klfhh   1/1     Running   0          5m38s   10.233.67.102   node5   <none>           <none>
+nginx1                       1/1     Running   0          18m     10.233.69.144   node1   <none>           <none>
+nginx2                       1/1     Running   0          18m     10.233.66.118   node2   <none>           <none>
+
+3. Our flask app is running node5 node and we get this node ip address below command:
+kubectl get nodes -n exam-49 -o wide
+NAME           STATUS   ROLES           AGE   VERSION   INTERNAL-IP       EXTERNAL-IP
+master-node1   Ready    control-plane   28d   v1.28.4   65.109.139.39     <none> 
+node1          Ready    <none>          28d   v1.28.4   135.181.204.192   <none>
+node2          Ready    <none>          28d   v1.28.4   95.217.7.185      <none> 
+node3          Ready    <none>          28d   v1.28.4   65.109.14.160     <none> 
+node4          Ready    <none>          28d   v1.28.4   95.217.135.101    <none> 
+node5          Ready    <none>          28d   v1.28.4   95.216.206.151    <none> 
+
+4. curl  95.216.206.151:30423
+
+5. output is next file (output.txt)

@@ -1,0 +1,1 @@
+kubectl port-forward pod/flask-app-d48d7df7b-5nbft 4444:5000 -n exam-49

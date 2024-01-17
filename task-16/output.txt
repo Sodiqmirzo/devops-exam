@@ -1,0 +1,20 @@
+Name:         go-app-zv498
+Namespace:    exam-49
+Labels:       app=go-app
+              endpointslice.kubernetes.io/managed-by=endpointslice-controller.k8s.io
+              kubernetes.io/service-name=go-app
+Annotations:  endpoints.kubernetes.io/last-change-trigger-time: 2024-01-17T15:43:28Z
+AddressType:  IPv4
+Ports:
+  Name     Port  Protocol
+  ----     ----  --------
+  <unset>  80    TCP
+Endpoints:
+  - Addresses:  10.233.65.159
+    Conditions:
+      Ready:    true
+    Hostname:   <unset>
+    TargetRef:  Pod/go-app-55d55f64bf-jhtgm
+    NodeName:   node4
+    Zone:       <unset>
+Events:         <none>

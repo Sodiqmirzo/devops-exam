@@ -1,0 +1,5 @@
+1. kubectl apply -f go-app-deployment.yaml
+
+2. kubectl get pods -n exam-49
+
+3. output is next file ->

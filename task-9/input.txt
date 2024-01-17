@@ -1,0 +1,20 @@
+1. kubectl expose deploy frontend-app --port 80 --target-port 80 --type NodePort -n exam-49 --dry-run=client -o yaml > frontend-app-expose-deployment.yaml
+
+2. kubectl get svc -n exam-49
+NAME           TYPE       CLUSTER-IP      EXTERNAL-IP   PORT(S)        AGE
+flask-app      NodePort   10.233.5.119    <none>        80:30423/TCP   22m
+frontend-app   NodePort   10.233.32.213   <none>        80:31949/TCP   12s
+
+3. Our frontend app is running node3 node and we get this node ip address below command:
+kubectl get nodes -n exam-49 -o wide
+NAME           STATUS   ROLES           AGE   VERSION   INTERNAL-IP       EXTERNAL-IP
+master-node1   Ready    control-plane   28d   v1.28.4   65.109.139.39     <none> 
+node1          Ready    <none>          28d   v1.28.4   135.181.204.192   <none>
+node2          Ready    <none>          28d   v1.28.4   95.217.7.185      <none> 
+node3          Ready    <none>          28d   v1.28.4   65.109.14.160     <none> 
+node4          Ready    <none>          28d   v1.28.4   95.217.135.101    <none> 
+node5          Ready    <none>          28d   v1.28.4   95.216.206.151    <none> 
+
+4. curl  65.109.14.160:31949
+
+5. output is next file (output.txt)

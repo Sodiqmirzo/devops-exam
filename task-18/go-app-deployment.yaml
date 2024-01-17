@@ -1,0 +1,63 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: go-app
+  name: go-app
+  namespace: exam-49
+spec:
+  selector:
+    matchLabels:
+      app: go-app
+  template:
+    metadata:
+      labels:
+        app: go-app
+    spec:
+      containers:
+      - image: sodikmirzo/go-app
+        name: go-app
+        env:
+        - name: ENVIRONMENT
+          valueFrom:
+            configMapKeyRef:
+              name: info
+              key: env
+        - name: LOG_LEVEL
+          valueFrom:
+            configMapKeyRef:
+              name: info
+              key: log_level  
+        - name: DB_URL
+          valueFrom:
+            secretKeyRef:
+              name: database
+              key: URL 
+        - name: GRPC_PORT
+          valueFrom:
+            configMapKeyRef:
+              name: info
+              key: grpc_port 
+        - name: POD_IP
+          valueFrom:
+            fieldRef:
+              fieldPath: status.podIP
+        - name: CPU
+          valueFrom:
+            resourceFieldRef:
+              containerName: go-app
+              resource: requests.cpu
+        - name: MEMORY
+          valueFrom:
+            resourceFieldRef:
+              containerName: go-app
+              resource: requests.memory      
+        ports:
+        - containerPort: 80
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "100m"
+          limits:
+            memory: "128Mi"
+            cpu: "200m"

@@ -1,0 +1,58 @@
+{
+    "addressType": "IPv4",
+    "apiVersion": "discovery.k8s.io/v1",
+    "endpoints": [
+        {
+            "addresses": [
+                "10.233.69.199"
+            ],
+            "conditions": {
+                "ready": true,
+                "serving": true,
+                "terminating": false
+            },
+            "nodeName": "node1",
+            "targetRef": {
+                "kind": "Pod",
+                "name": "go-app-f4c57f5df-mjq4g",
+                "namespace": "exam-49",
+                "uid": "7478f40a-0582-492e-8055-669e870c4837"
+            }
+        }
+    ],
+    "kind": "EndpointSlice",
+    "metadata": {
+        "annotations": {
+            "endpoints.kubernetes.io/last-change-trigger-time": "2024-01-17T16:11:46Z"
+        },
+        "creationTimestamp": "2024-01-17T15:16:45Z",
+        "generateName": "go-app-",
+        "generation": 13,
+        "labels": {
+            "app": "go-app",
+            "endpointslice.kubernetes.io/managed-by": "endpointslice-controller.k8s.io",
+            "kubernetes.io/service-name": "go-app"
+        },
+        "name": "go-app-zv498",
+        "namespace": "exam-49",
+        "ownerReferences": [
+            {
+                "apiVersion": "v1",
+                "blockOwnerDeletion": true,
+                "controller": true,
+                "kind": "Service",
+                "name": "go-app",
+                "uid": "00e58f2e-b54e-4495-9103-17b3ca3ccf4d"
+            }
+        ],
+        "resourceVersion": "6057426",
+        "uid": "c1f1b543-3e50-4ae1-8ed1-33167cdb7c2f"
+    },
+    "ports": [
+        {
+            "name": "",
+            "port": 80,
+            "protocol": "TCP"
+        }
+    ]
+}

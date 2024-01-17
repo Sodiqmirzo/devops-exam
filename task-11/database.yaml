@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  KEY: MTI3LjAuMC4xCg==
+  URL: cG9zdGdyZXM6Ly9hZG1pbjpzdXBlcnNlY3JldEAxMC4xMC4xMC4xOjU0MzIvZXhhbS1kYgo=
+kind: Secret
+metadata:
+  name: database
+  namespace: exam-49
